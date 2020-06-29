@@ -1,0 +1,59 @@
+Library prompt py
+
+Library = {
+    "books": {"old man and the sea",
+              "A wife's tale",
+              "Harry potter and the chamber of secrets"
+
+    },
+    "movies": { "Avengers",
+                "Gingerbread man",
+                "Shrek"
+    }
+}
+prompt = "welcome to the library. would you like any help?"
+prompt += "\nif you don't,please say no:"
+
+active = True
+while active:
+    message = input(prompt)
+
+    if message == 'no':
+        active = False
+        print('hope you find what you are looking for')
+        break
+    else:
+        print('tell me what you are looking for')
+    feedback = input('books or movies?:')
+    if feedback == 'books':
+        feedback_2 =(input('okay lets walk to that section. would you like any other help?:'))
+        if feedback_2 != 'yes':
+            break
+
+        else:
+            feedback_3 = input("which book would you like" + str(Library['books']))
+            if feedback_3 == 'old man and the sea':
+                print('excellent choice, right this way,give me 1 sec')
+                break
+            if feedback_3 == "A wife's tale":
+                print('well done on your selection,give me 1 sec')
+                break
+            if feedback_3 == 'Harry potter and the chamber of secrets':
+                print('great choice for a book, give me 1 sec')
+                break
+    elif feedback == 'movies':
+        feedback_4 = (input('okay lets walk to that section. would you like any other help?:'))
+        if feedback_4 != 'yes':
+            break
+        else:
+            feedback_5 = input("which movies would you like" + str(Library['movies']))
+            if feedback_5 == 'Avengers':
+                print('excellent choice, right this way')
+                break
+            if feedback_5 == "Gingerbread man":
+                print('well done on your selection,lets go get it')
+                break
+            if feedback_5 == 'Shrek':
+                print('i see you are trying to be corny sir, well lets get it. hats off to you')
+                break
+ 
