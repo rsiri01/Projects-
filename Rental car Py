@@ -1,0 +1,59 @@
+Rental Car Py
+
+luxcars = {
+    'rolls royce' : {
+        'model' : ['phantom', 'ghost', 'wraith'],
+        'style' : ['coupee','sedan'],
+    },
+    'bentley' : {
+        'model' : ['continental','flying spur','mulsanne'],
+        'style' : ['coupee', 'sedan'],
+    },
+    'ford' : {
+        'model' : ['mustang','fiesta','explorer','ranger'],
+        'style' : ['coupe','sedan','suv'],
+    }
+}
+
+print('here is what we have available')
+for key,value in luxcars.items():
+    print(key)
+
+rental_car = input('which of these amazing cars do you like?:')
+print('excellent choice sir')
+
+if rental_car == 'rolls royce':
+    print(luxcars['rolls royce']['model'])
+elif rental_car == 'bentley':
+    print(luxcars['bentley']['model'])
+else:
+    print(luxcars['ford']['model'])
+
+
+
+
+rental_car1 = input('which model would you like?:')
+
+if rental_car1 == ['phantom'] or ['ghost'] or ['wraith']:
+    print(luxcars['rolls royce']['style'])
+elif rental_car1 == ['continental'] or ['flying spur'] or ['mulsanne']:
+    print(luxcars['bentley']['style'])
+else:
+    print(luxcars['ford']['style'])
+
+
+rental_car3 = input('which style of this car would you like?:')
+
+confirmation = rental_car + '\n' + rental_car1 + '\n' + rental_car3
+print(confirmation)
+confirmation=(input('is this correct?:'))
+if confirmation == 'yes':
+    print('thank you for your selection, ill have someone bring it around shortly')
+else:
+    print('lets find a car more suitable to your taste')
+
+additional_coverage = input("would you like to add 'collision coverage' , or 'unlimited mile warranty?':")
+if additional_coverage == 'yes':
+    print('excellent choice, that will be additional $100')
+else:
+
